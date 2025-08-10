@@ -1,0 +1,152 @@
+body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #fff0f5;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #ffb6c1;
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+      background-image: url('https://i.imgur.com/QkKpR5r.png');
+      background-size: cover;
+    }
+
+    header h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px #ff69b4;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(255, 182, 193, 0.6);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 150px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    .letter {
+      background: #fffaf0;
+      border: 2px dashed #ff69b4;
+      padding: 20px;
+      font-style: italic;
+      animation: pulse 3s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { background-color: #fffaf0; }
+      50% { background-color: #ffe4e1; }
+    }
+
+    footer {
+      background: #ffb6c1;
+      text-align: center;
+      padding: 20px;
+      color: white;
+      border-top: 3px solid #ff69b4;
+    }
+
+    .fox-icon {
+      width: 50px;
+      vertical-align: middle;
+    }
+
+    /* Zorro animado */
+    .fox-animation {
+      position: fixed;
+      bottom: 0;
+      left: -200px;
+      width: 70px;
+      animation: walkFox 20s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes walkFox {
+      0% { left: -200px; }
+      100% { left: 100%; }
+    }
+
+    /* Botón Sorpresa */
+    .surprise-btn {
+      display: block;
+      margin: 30px auto;
+      padding: 15px 30px;
+      background-color: #ff69b4;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
+      transition: background 0.3s;
+    }
+
+    .surprise-btn:hover {
+      background-color: #ff1493;
+    }
+
+    .hearts-container {
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 999;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: url('img/heart.png') no-repeat center center;
+      background-size: contain;
+      animation: floatHearts 5s linear infinite;
+    }
+
+    @keyframes floatHearts {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    #surprise-message {
+      text-align: center;
+      font-size: 1.4em;
+      margin-top: 20px;
+      display: none;
+      color: #d4006e;
+      font-weight: bold;
+    }
